@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../classes/user';
 import { Repo } from '../classes/repo';
-import { environment } from '../../environments/environment'
+import { environment  } from '../../environments/environment'
 import { HttpClient } from '@angular/common/http'
 
 
@@ -12,7 +12,7 @@ export class ServiceRequestService {
   private userName:string;
 
   apiKey:string = environment.apiKey;
-  baseUrl:string = environment.baseUrl;
+
 
   constructor(private http:HttpClient) {
     this.user = new User ('', '', '', '', 0, 0, 0);
