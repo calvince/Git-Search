@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+<div class="search-class">
+  <p id='users' class="btn btn-warning" (click)="searchUsers = true">Users</p>
+  <p id='repos' class="btn btn-info" (click)="searchUsers = false">Repos</p>
+</div>
+<p class="moringa"></p>
+<form>
+  <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Enter Username" (keyup)="getProfile()">
+    </div>
+</form>
+
+
+<div *ngIf="searchUsers" class="d-flex justify-content-sm-between clearfix main-card">
+  <div class="avi-panel to-left">
+    <img src="{{user.avatar_url}}" alt="avatar">
+    <a href="{{user.html_url}}" target="_blank"><button class=" prof-btn">Go to Profile </button></a>
+  </div>
+  <div class="details to-right">
+      <h3>{{user.name}}</h3>
+      <p class="btn btn-danger">Followers<br><span>{{user.followers}}</span></p>
+      <p class="btn btn-warning">Following<br><span>{{user.following}}</span></p>
+      <p class="btn btn-info">Repositories<br><span>{{user.public_repos}}</span></p>
+  </div>
+  
+</div>
+
+<div *ngIf="!searchUsers">
+  <div class="container repo-row">
+    <div *ngFor="let rep of repo" class="some-card">
+      <a href="{{rep.html_url}}" target="_blank">
+          <h3>{{rep.name}}</h3>
+          <p>{{rep.description}}</p>
+          <p>{{rep.created_at |dateCount}}</p>
+      </a>
+      
+    </div>
+    
+  </div>
+</div>
+</div>
+</div>
+</div>
+
