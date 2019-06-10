@@ -22,9 +22,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Project live site
 
-  This is the live .[ Click for the demo]()
+  This is the live .[ Click for the demo](https://calvince.github.io/Git-Search/)
 
-  ![Image]()
+  
 
 ## Languages used
 
@@ -73,6 +73,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Support and contact details
 contact me @ calmosh1421@gmail.com
 ### License
-The project is under [MIT license]()
+The project is under [MIT license](https://github.com/calvince/Git-Search/blob/master/LICENSE)
 Copyright &copy; 2019.All rigths reserved
   
