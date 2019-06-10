@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Black+And+White+Picture|Yesteryear&display=swap");
+.search-class p{
+    display: inline-block;
+    padding: 2%;
+    font-size: 20px;
+    /* font-family: 'Yesteryear', cursive; */
+}
+*{
+    font-family: 'Black And White Picture', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+}
+body{
+    background-color: red;
+}
+form{
+    margin: 0 2%;
+    margin-bottom: 2%;
+}
+.prof-btn{
+    display: block;
+}
+.to-left{
+    margin: 0 5%;
+}
+.to-left img{
+    width: 200px;
+}
+.to-right p{
+    margin: 0 5px;
+}
+/* .container{
+    background-image: url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.some-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    box-shadow: 0 0 15px aqua;
+    margin: 2%;
+    background-color: azure;
+}
+.moringa{
+    color: blue;
+    font-size: 20px;
+}
+.search-class p{
+    margin: 0 2%;
+}
+button{
+    position: relative;
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline-color: transparent;
+}
+button::after{
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    left: 0;
+    transition: all 0.2s ease;
+  
+}
+button:hover{
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    border-radius: 30px;
+    transition-delay: 0.1s;
+
+}
+button:active{
+    box-shadow: 0 0 60px rgb(255, 255, 255);
+  transition: 0.1s ease;
+}
+button:hover::after{
+    left: 100%;
+  border-top: 3px solid rgb(0, 0, 0);
+  border-right: 3px solid rgb(255, 255, 255);
+  box-shadow: 15px -15px 20px rgb(255, 255, 255);
+}
+.prof-btn{
+    margin-top: 1%;
+}
