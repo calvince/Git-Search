@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../classes/user';
 import { Repo } from '../classes/repo';
-import { environment  } from '../../environments/environment'
+// import { environment  } from '../../environments/environment'
 import { HttpClient } from '@angular/common/http'
 
 
@@ -11,7 +11,7 @@ export class ServiceRequestService {
   repo:Repo;
   private userName:string;
 
-  apiKey:string = environment.apiKey;
+  // apiKey:string = environment.apiKey;
 
 
   constructor(private http:HttpClient) {
@@ -32,7 +32,7 @@ export class ServiceRequestService {
       following: number;
     }
     const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '?access_token=' + this.apiKey )
+      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '?access_token=' + 'f19b45f71942b774e310eb5acda3ca5b117bde27' )
       .toPromise()
       .then(res => {
           this.user.login = res.login;
@@ -60,7 +60,7 @@ export class ServiceRequestService {
     }
 
     const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '/repos?access_token=' + this.apiKey )
+      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '/repos?access_token=' + 'f19b45f71942b774e310eb5acda3ca5b117bde27'  )
         .toPromise()
         .then(res => {
           this.repo = res;
